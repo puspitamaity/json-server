@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Task Management</title>
+</head>
+<style>
+    body {
+  font-family: Arial, sans-serif;
+  margin: 20px;
+}
+
+form {
+  margin-bottom: 20px;
+}
+
+table {
+  width: 100%;
+  border-collapse: collapse;
+}
+
+th, td {
+  padding: 8px 12px;
+  border: 1px solid #ccc;
+}
+
+th {
+  background-color: #f4f4f4;
+}
+
+</style>
+<body>
+  <h1>Task Management System</h1>
+  <form id="ticketForm">
+    <input type="hidden" id="ticketId" value="">
+    <input type="text" id="title" placeholder="Title" required>
+    <textarea id="description" placeholder="Description" required></textarea>
+    <select id="status" required>
+      <option value="open">Open</option>
+      <option value="in-progress">In Progress</option>
+      <option value="closed">Closed</option>
+    </select>
+    <input type="date" id="dueDate" required>
+    <select id="priority" required>
+      <option value="low">Low</option>
+      <option value="medium">Medium</option>
+      <option value="high">High</option>
+    </select>
+    <button type="submit">Save Ticket</button>
+  </form>
+  <table id="ticketsTable">
+    <thead>
+      <tr>
+        <th>Title</th>
+        <th>Description</th>
+        <th>Status</th>
+        <th>Due Date</th>
+        <th>Priority</th>
+        <th>Actions</th>
+      </tr>
+    </thead>
+    <tbody></tbody>
+  </table>
+  <script src="script.js"></script>
+</body>
+</html>
